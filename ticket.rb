@@ -41,8 +41,24 @@ end
 # 	puts "Sorry, that seat has been sold."
 # end
 
-obj = Object.new
-puts "The id of obj is #{obj.object_id}."
-str = "Strings are objects too, and this is a string!"
-puts "The id of the string object str is #{str.object_id}"
-puts "And the id of the ineger 100 is #{100.object_id}"
+# obj = Object.new
+# puts "The id of obj is #{obj.object_id}."
+# str = "Strings are objects too, and this is a string!"
+# puts "The id of the string object str is #{str.object_id}"
+# puts "And the id of the ineger 100 is #{100.object_id}"
+
+# obj = Object.new
+# if obj.respond_to?("talk")
+# 	obj.talk
+# else
+# 	puts "Sorry,the object doesn't understand the 'talk' message."
+# end
+
+#how to use send,public_send,__send__
+print "information desired: "
+request = gets.chomp
+if ticket.respond_to?(request)
+	puts ticket.__send__(request)
+else
+	puts "No such information available"
+end
