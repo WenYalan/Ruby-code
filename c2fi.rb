@@ -20,4 +20,12 @@ class Temperature
 	end
 end
 
-puts Temperature.c2f(100)
+# puts Temperature.c2f(100)
+
+celsius = [0,10,20,30,40,50,60,70]
+
+puts "Celsius\tFahrenheit"
+
+for c in celsius
+	puts "#{c}\t#{Temperature.c2f(c)}"
+end
